@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginBottom="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/gallery_item_author_avatar_image"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            app:layout_constraintBottom_toBottomOf="@+id/gallery_item_author_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/gallery_item_title_text" />
+
+        <TextView
+            android:id="@+id/gallery_item_title_text"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/gallery_item_author_avatar_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Title" />
+
+        <TextView
+            android:id="@+id/gallery_item_author_text"
+            style="@style/TextAppearance.MaterialComponents.Overline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/gallery_item_title_text"
+            app:layout_constraintTop_toBottomOf="@+id/gallery_item_title_text"
+            tools:text="Title" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/gallery_item_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/image_bg"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gallery_item_author_text" />
+
+        <Button
+            android:id="@+id/more_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/see_more"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/gallery_item_image_view" />
+
+
+        <TextView
+            android:id="@+id/gallery_item_likes_text_view"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/gallery_item_image_view"
+            app:layout_constraintTop_toBottomOf="@+id/more_button"
+            tools:text="294.830 Me gusta" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
